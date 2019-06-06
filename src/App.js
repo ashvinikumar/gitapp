@@ -13,7 +13,6 @@ class App extends Component {
   componentDidMount() {
     this.getProfileData();
     this.getListOfRepos();
-    this.programmingLang();
   }
 
   getProfileData = () => {
@@ -41,17 +40,6 @@ class App extends Component {
         console.log(err);
       });
   };
-
-  programmingLang = () => {
-    axios
-      .get("https://api.github.com/repos/supreetsingh247/first-contributions/languages")
-      .then(response => {
-        console.log("res: ", response);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }
 
   render() {
     return (
