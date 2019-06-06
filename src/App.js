@@ -7,7 +7,8 @@ import RightColumn from "./RightColumn/RightColumn";
 class App extends Component {
   state = {
     profileData: {},
-    listOfRepos: []
+    listOfRepos: [],
+    searchRepoName: ""
   };
 
   componentDidMount() {
@@ -41,7 +42,16 @@ class App extends Component {
       });
   };
 
+  searchRepoNameChangeHandler = event => {
+    const name = event.target.name;
+    console.log(event.target.value);
+    this.setState({
+      [name]: event.target.value
+    });
+  };
+
   render() {
+    console.log("this.state.searchRepoName: ", this.state.searchRepoName)
     return (
       <div className="App">
         <div className="row padding5">
@@ -53,7 +63,11 @@ class App extends Component {
             <div className="center">&nbsp;</div>
             {/* right column */}
             <div className="right-column">
-              <RightColumn listOfRepos={this.state.listOfRepos} />
+              <RightColumn
+                listOfRepos={this.state.listOfRepos}
+                searchRepoName={this.state.searchRepoName}
+                searchRepoNameChangeHandler={this.searchRepoNameChangeHandler}
+              />
             </div>
           </div>
         </div>

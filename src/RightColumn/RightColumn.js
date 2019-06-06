@@ -37,6 +37,9 @@ const RightColumn = props => {
               <input
                 type="text"
                 className="search-input"
+                name="searchRepoName"
+                value={props.searchRepoName}
+                onChange={(event) => props.searchRepoNameChangeHandler(event)}
                 placeholder="Find a repository..."
               />
               <div className="selectors">
