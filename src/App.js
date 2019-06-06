@@ -50,6 +50,7 @@ class App extends Component {
             <div className="left-column">
               <LeftColumn profileData={this.state.profileData} />
             </div>
+            <div className="center">&nbsp;</div>
             {/* right column */}
             <div className="right-column">
               <RightColumn listOfRepos={this.state.listOfRepos} />

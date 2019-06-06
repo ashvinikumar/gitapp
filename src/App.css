@@ -42,9 +42,13 @@
   text-align: left;
 }
 
-/* right column */
+.center {
+  width: 4%;
+  float: left;
+}
 
+/* right column */
 .right-column {
-  width: 76%;
+  width: 72%;
   float: left;
 }
