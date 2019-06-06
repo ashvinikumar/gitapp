@@ -5,13 +5,15 @@ import LeftColumn from "./LeftColumn/LeftColumn";
 import RightColumn from "./RightColumn/RightColumn";
 
 class App extends Component {
-
   state = {
-    profileData: {}
-  }
+    profileData: {},
+    listOfRepos: []
+  };
 
   componentDidMount() {
     this.getProfileData();
+    this.getListOfRepos();
+    this.programmingLang();
   }
 
   getProfileData = () => {
@@ -20,11 +22,35 @@ class App extends Component {
       .then(response => {
         this.setState({
           profileData: response.data
-        })
+        });
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
+      });
+  };
+
+  getListOfRepos = () => {
+    axios
+      .get("https://api.github.com/users/supreetsingh247/repos")
+      .then(response => {
+        this.setState({
+          listOfRepos: response.data
+        });
       })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  programmingLang = () => {
+    axios
+      .get("https://api.github.com/repos/supreetsingh247/first-contributions/languages")
+      .then(response => {
+        console.log("res: ", response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   render() {
@@ -38,7 +64,7 @@ class App extends Component {
             </div>
             {/* right column */}
             <div className="right-column">
-              <RightColumn />
+              <RightColumn listOfRepos={this.state.listOfRepos} />
             </div>
           </div>
         </div>

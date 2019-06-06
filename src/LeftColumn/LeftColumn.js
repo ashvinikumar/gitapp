@@ -2,7 +2,6 @@ import React from "react";
 import "./LeftColumn.css";
 
 const LeftColumn = props => {
-  console.log(props);
   return (
     <React.Fragment>
       <div className="profile">

@@ -1,7 +1,10 @@
 import React from "react";
 import "./RightColumn.css";
+import Moment from "moment";
 
-const RightColumn = () => {
+
+const RightColumn = (props) => {
+  console.log(props.listOfRepos)
   return (
     <React.Fragment>
       <div className="user-profile-nav">
@@ -62,6 +65,27 @@ const RightColumn = () => {
             </div>
           </form>
         </div>
+      </div>
+
+      <div className="reposList">
+        {props.listOfRepos.length > 0 ? (
+          props.listOfRepos.map(repo => 
+            <div className="repo" key={repo.id}>
+              <h3 className="repo-name">
+                <a href={`${repo.html_url}`} target="_blank">{repo.name}</a>
+              </h3>
+              <div className="f6 text-gray mt-2">
+                <span className="ml-0 mr-3">
+                  <span className="repo-language-color"></span>
+                  <span className="programmingLanguage">{}</span>
+                </span>
+                Updated {Moment(repo.updated_at).format("DD MMM YYYY")}
+              </div>
+            </div>
+          )
+        ) : null}
+
+        
       </div>
     </React.Fragment>
   );

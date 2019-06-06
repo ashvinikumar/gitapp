@@ -22,7 +22,7 @@
 }
 
 .counter {
-  background-color: rgba(27,31,35,.08);
+  background-color: rgba(27, 31, 35, .08);
   border-radius: 20px;
   color: #586069;
   display: inline-block;
@@ -47,7 +47,7 @@
   background-repeat: no-repeat;
   border: 1px solid #d1d5da;
   border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+  box-shadow: inset 0 1px 2px rgba(27, 31, 35, .075);
   color: #24292e;
   font-size: 16px;
   line-height: 20px;
@@ -74,7 +74,7 @@
   background-position: -1px -1px;
   background-repeat: repeat-x;
   background-size: 110% 110%;
-  border: 1px solid rgba(27,31,35,.2);
+  border: 1px solid rgba(27, 31, 35, .2);
   border-radius: .25em;
   cursor: pointer;
   display: inline-block;
@@ -88,7 +88,7 @@
   white-space: nowrap;
 }
 
-.type-selector::after, .language-selector::after{
+.type-selector::after, .language-selector::after {
   border: 4px solid transparent;
   border-top-color: currentcolor;
   content: "";
@@ -100,13 +100,13 @@
 
 .create-new-repo {
   background-color: #28a745;
-  background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
+  background-image: linear-gradient(-180deg, #34d058, #28a745 90%);
   color: #fff;
   text-align: center!important;
   background-position: -1px -1px;
   background-repeat: repeat-x;
   background-size: 110% 110%;
-  border: 1px solid rgba(27,31,35,.2);
+  border: 1px solid rgba(27, 31, 35, .2);
   border-radius: .25em;
   cursor: pointer;
   display: inline-block;
@@ -120,4 +120,49 @@
   white-space: nowrap;
   margin-left: 1rem;
   text-decoration: none;
+}
+
+.repo {
+  border-bottom: 1px solid #e1e4e8!important;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.repo-name {
+  text-align: left;
+  color: #0366d6;
+}
+
+a {
+  text-decoration: none;
+}
+
+.f6 {
+  font-size: 12px!important;
+}
+
+.text-grey {
+  color: #586069!important;
+}
+
+.mt-2 {
+  margin-top: 8px!important;
+}
+
+.mr-3 {
+  margin-right: 16px!important;
+}
+
+.ml-0 {
+  margin-left: 0!important;
+}
+
+.repo-language-color {
+  border-radius: 50%;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  top: 1px;
+  width: 12px;
+  background-color: #f1e05a;
 }
