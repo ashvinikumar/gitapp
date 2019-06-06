@@ -1,0 +1,123 @@
+.user-profile-nav {
+  border-bottom: 1px solid #d1d5da;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.UnderlineNav-body {
+  display: flex;
+}
+
+.UnderlineNav-item {
+  border-bottom: 2px solid transparent;
+  color: #586069;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-right: 16px;
+  padding: 16px 8px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.counter {
+  background-color: rgba(27,31,35,.08);
+  border-radius: 20px;
+  color: #586069;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 2px 5px;
+  margin-left: 5px;
+}
+
+.search-repo {
+  padding-bottom: 16px!important;
+  padding-top: 16px!important;
+  border-color: #d1d5da!important;
+  border-bottom: 1px solid #e1e4e8!important;
+  text-align: left;
+}
+
+.search-input {
+  background-color: #fff;
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  border: 1px solid #d1d5da;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+  color: #24292e;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 34px;
+  outline: none;
+  padding: 6px 8px;
+  vertical-align: middle;
+  width: 65%;
+}
+
+.input-div {
+  display: flex;
+}
+
+.selectors {
+  margin-left: 1rem;
+}
+
+.language-selector {
+  margin-left: 0.5rem;
+}
+
+.type-selector, .language-selector {
+  background-position: -1px -1px;
+  background-repeat: repeat-x;
+  background-size: 110% 110%;
+  border: 1px solid rgba(27,31,35,.2);
+  border-radius: .25em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 12px;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.type-selector::after, .language-selector::after{
+  border: 4px solid transparent;
+  border-top-color: currentcolor;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: -2px;
+  width: 0;
+}
+
+.create-new-repo {
+  background-color: #28a745;
+  background-image: linear-gradient(-180deg,#34d058,#28a745 90%);
+  color: #fff;
+  text-align: center!important;
+  background-position: -1px -1px;
+  background-repeat: repeat-x;
+  background-size: 110% 110%;
+  border: 1px solid rgba(27,31,35,.2);
+  border-radius: .25em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 12px;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 1rem;
+  text-decoration: none;
+}
