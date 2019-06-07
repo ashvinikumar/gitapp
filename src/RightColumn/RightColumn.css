@@ -64,6 +64,7 @@
 
 .selectors {
   margin-left: 1rem;
+  display: flex;
 }
 
 .language-selector {
@@ -120,6 +121,7 @@
   white-space: nowrap;
   margin-left: 1rem;
   text-decoration: none;
+  height: 2.4rem;
 }
 
 .repo {
@@ -165,4 +167,16 @@ a {
   top: 1px;
   width: 12px;
   background-color: #f1e05a;
+}
+
+.selectType, .selectLanguage {
+  width: 7rem !important;
+}
+
+.new-repo {
+  height: 2.4rem;
+}
+
+.p10 {
+  padding-left: 10px;
 }

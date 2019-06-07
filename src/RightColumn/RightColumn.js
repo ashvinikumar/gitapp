@@ -1,6 +1,7 @@
 import React from "react";
 import "./RightColumn.css";
 import Moment from "moment";
+import Select from "react-select";
 
 const RightColumn = props => {
   return (
@@ -14,7 +15,7 @@ const RightColumn = props => {
             Repositories
             <span className="counter">11</span>
           </a>
-          <div></div>
+          <div />
           <a href="#" className="UnderlineNav-item">
             Stars
             <span className="counter">5</span>
@@ -39,30 +40,30 @@ const RightColumn = props => {
                 className="search-input"
                 name="searchRepoName"
                 value={props.searchRepoName}
-                onChange={(event) => props.searchRepoNameChangeHandler(event)}
+                onChange={event => props.searchRepoNameChangeHandler(event)}
                 placeholder="Find a repository..."
               />
               <div className="selectors">
-                <select className="type-selector">
-                  <option value="all">All</option>
-                  <option value="public">Public</option>
-                  <option value="private">Private</option>
-                  <option value="sources">Sources</option>
-                  <option value="forks">Forks</option>
-                  <option value="archived">Archived</option>
-                  <option value="mirrors">Mirrors</option>
-                </select>
-                <select className="language-selector">
-                  <option value="all">All</option>
-                  <option value="javaScript">JavaScript</option>
-                  <option value="html">HTML</option>
-                  <option value="css">CSS</option>
-                  <option value="python">Python</option>
-                  <option value="typeScript">TypeScript</option>
-                </select>
-                <a href="#" className="create-new-repo">
+                <Select
+                  className="selectType"
+                  placeholder="Type"
+                  type="text"
+                  onChange={props.selectTypeHandler}
+                  value={props.defaultSelectedType}
+                  options={props.selectType}
+                />
+
+                <Select
+                  className="selectLanguage p10"
+                  placeholder="Language"
+                  type="text"
+                  onChange={props.selectLanguageHandler}
+                  value={props.defaultSelectedLanguage}
+                  options={props.selectLanguage}
+                />
+                <button href="#" className="create-new-repo">
                   New
-                </a>
+                </button>
               </div>
             </div>
           </form>
