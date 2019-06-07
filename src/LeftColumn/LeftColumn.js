@@ -29,17 +29,17 @@ const LeftColumn = props => {
 
         <div className="border-top">
           <p>
-            <i class="fas fa-user-friends" />{" "}
+            <i className="fas fa-user-friends" />{" "}
             <span>{props.profileData.company}</span>
           </p>
           <p>
-            <i class="fas fa-map-marker-alt" />{" "}
+            <i className="fas fa-map-marker-alt" />{" "}
             <span>{props.profileData.location}</span>
           </p>
           <p>
             {props.profileData.email ? (
               <span>
-                <i class="far fa-envelope" />{" "}
+                <i className="far fa-envelope" />{" "}
                 <span>
                   <a href={`mailto: ${props.profileData.email}`}>
                     mailto:{props.profileData.email}
